@@ -1,0 +1,344 @@
+/* Custom Palette Variables */
+:root {
+    --deep-teal: #0F766E;
+    --soft-mint: #E8F5F2;
+    --warm-white: #FAFCFB;
+    --dark-slate: #263238;
+    --coral: #F28C7B;
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+}
+
+/* Reset & Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--warm-white);
+    color: var(--dark-slate);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Base Card Styles */
+.profile-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(15, 118, 110, 0.04);
+    border: 1px solid var(--border-color);
+}
+
+/* Header Component */
+.header-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--soft-mint);
+}
+
+.header-details h1 {
+    color: var(--deep-teal);
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.name-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.verification-badge {
+    background-color: var(--soft-mint);
+    color: var(--deep-teal);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.specialties {
+    font-weight: 600;
+    color: var(--dark-slate);
+    margin-bottom: 0.5rem;
+}
+
+.qualifications, .experience {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.meta-metrics {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.metric-tag {
+    background-color: #F8FAFC;
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.highlight-tag {
+    background-color: var(--soft-mint);
+    border-color: transparent;
+}
+
+/* Subheadings */
+h2, h3 {
+    color: var(--deep-teal);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Grid Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Timings Components */
+.location-block {
+    margin-bottom: 1rem;
+}
+
+.clinic-name {
+    font-weight: 600;
+}
+
+.clinic-address {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.timing-list {
+    list-style: none;
+}
+
+.timing-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 0.95rem;
+}
+
+/* Treatments Components */
+.treatments-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.treatment-tag {
+    background-color: var(--soft-mint);
+    color: var(--dark-slate);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border-left: 3px solid var(--coral); /* Coral Accent */
+}
+
+/* Reviews Components */
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.rating-summary {
+    font-weight: 700;
+    color: var(--deep-teal);
+}
+
+.rating-summary small {
+    color: var(--dark-slate);
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.review-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.reviewer-name {
+    font-weight: 600;
+}
+
+.review-stars {
+    color: var(--coral); /* Coral Accent for stars */
+}
+
+.review-text {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Sidebar & Sticky Button Elements */
+.sticky-booking {
+    position: sticky;
+    top: 1rem;
+}
+
+.booking-note {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    opacity: 0.85;
+}
+
+/* Interactive Buttons */
+.btn {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--deep-teal);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0d635c;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background-color: var(--soft-mint);
+    color: var(--deep-teal);
+}
+
+.btn-secondary:hover {
+    background-color: #d2ebe5;
+}
+
+/* Modal Windows */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 50, 56, 0.5); /* Semi-transparent Dark Slate */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-20px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-card p {
+    margin: 0.5rem 0 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Responsive Framework */
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .name-row {
+        justify-content: center;
+    }
+    
+    .meta-metrics {
+        justify-content: center;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sticky-booking {
+        position: static;
+    }
+}

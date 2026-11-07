@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Main Header Card -->
+        <header class="profile-card header-section">
+            <div class="avatar-wrapper">
+                <img src="https://unsplash.com" alt="Doctor Profile Photo" class="profile-img">
+            </div>
+            
+            <div class="header-details">
+                <div class="name-row">
+                    <h1>Dr. Sarah Jenkins</h1>
+                    <span class="verification-badge" title="Verified Professional">
+                        <i class="fa-solid fa-circle-check"></i> Verified
+                    </span>
+                </div>
+                <p class="specialties">Cardiologist • Interventional Cardiology Specialist</p>
+                <p class="qualifications"><i class="fa-solid fa-graduation-cap"></i> MD, FACC, Ph.D. in Cardiovascular Medicine</p>
+                <p class="experience"><i class="fa-solid fa-briefcase"></i> 14+ Years of Clinical Experience</p>
+                
+                <div class="meta-metrics">
+                    <span class="metric-tag"><i class="fa-solid fa-wallet"></i> Fee: $120 - $180</span>
+                    <span class="metric-tag highlight-tag"><i class="fa-solid fa-hourglass-half"></i> Est. Wait: ~15 mins</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Two Column Layout for Details & Booking -->
+        <div class="profile-grid">
+            
+            <!-- Left Column: Details -->
+            <main class="main-content">
+                <!-- Location & Timings -->
+                <section class="profile-card">
+                    <h2><i class="fa-solid fa-location-dot"></i> Clinic Location & Timings</h2>
+                    <div class="location-block">
+                        <p class="clinic-name">Metro Heart & Vascular Center</p>
+                        <p class="clinic-address">Suite 402, Medical Plaza, Downtown Core</p>
+                    </div>
+                    <ul class="timing-list">
+                        <li><span>Mon - Wed</span> <span>09:00 AM - 04:00 PM</span></li>
+                        <li><span>Thursday</span> <span>10:00 AM - 02:00 PM</span></li>
+                        <li><span>Friday</span> <span>09:00 AM - 12:00 PM</span></li>
+                    </ul>
+                </section>
+
+                <!-- Treatments Offered -->
+                <section class="profile-card">
+                    <h2><i class="fa-solid fa-stethoscope"></i> Treatments Offered</h2>
+                    <div class="treatments-tags">
+                        <span class="treatment-tag">Echocardiography</span>
+                        <span class="treatment-tag">Hypertension Management</span>
+                        <span class="treatment-tag">Coronary Angiography</span>
+                        <span class="treatment-tag">Heart Failure Therapy</span>
+                        <span class="treatment-tag">Angioplasty</span>
+                    </div>
+                </section>
+
+                <!-- Reviews -->
+                <section class="profile-card">
+                    <div class="reviews-header">
+                        <h2><i class="fa-solid fa-star"></i> Patient Reviews</h2>
+                        <span class="rating-summary">4.9/5 <small>(124 reviews)</small></span>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-meta">
+                            <span class="reviewer-name">Robert T.</span>
+                            <span class="review-stars">★★★★★</span>
+                        </div>
+                        <p class="review-text">Dr. Jenkins is incredibly thorough. She took the time to explain my treatment plan clearly and put my mind at ease.</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-meta">
+                            <span class="reviewer-name">Emily K.</span>
+                            <span class="review-stars">★★★★★</span>
+                        </div>
+                        <p class="review-text">The clinic staff was helpful, and the estimated wait time was spot on. Highly recommended!</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Right Column: Booking Widget -->
+            <aside class="sidebar">
+                <div class="profile-card sticky-booking">
+                    <h3>Quick Booking</h3>
+                    <p class="booking-note">Select an action to securely book your clinical appointment slot.</p>
+                    <button class="btn btn-primary" id="bookBtn">
+                        <i class="fa-solid fa-calendar-check"></i> Book an Appointment
+                    </button>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-card">
+            <h3>Confirm Appointment</h3>
+            <p>Would you like to initiate the booking pipeline for Dr. Sarah Jenkins?</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="closeBtn">Cancel</button>
+                <button class="btn btn-primary" id="confirmBtn">Confirm & Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
